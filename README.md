@@ -44,7 +44,7 @@ give from just one password, up to however many you want. You can specify passwo
 **2)** Give a file to use, or a few to combine, `-P passwords.txt extra.txt`<br />
 **3)** Give both a file & manual entry, `-P passwords.txt -p redklyda24`
 ## Payloads
-Payloads are how you form the request, so the target website can take it in, and process it. Usually you would need to specify a: username value, a password value, and sometimes an extra value. You can see the payload your target uses by reviewing the network tab, of your browsers inspect element. For Klyda, you use the `-d` tag.<br />
+Payloads are how you form the request, so the target website can take it in, and process it. Usually you would need to specify a: username value, a password value, and sometimes an extra value. You can see the form data your target uses by reviewing the network tab, of your browsers inspect element. For Klyda, you use the `-d` tag.<br />
 
 You need to use placeholders to Klyda knows where to fill in the username & password, when fowarding out its requests. It may look something like this...
 `-d username:xuser password:xpass Login:Login`
