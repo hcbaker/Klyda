@@ -51,3 +51,5 @@ You need to use placeholders to Klyda knows where to fill in the username & pass
 
 `xuser` is the placeholder to inject the usernames, & `xpass` is the placeholder to inject the passwords. Make sure you know these. If it is really neccessary, 
 you can change the placeholder values with `-ph (value1) (value2)`
+
+Parameters are formatted with `(key):(value)`
