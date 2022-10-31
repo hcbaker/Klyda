@@ -53,3 +53,12 @@ You need to use placeholders to Klyda knows where to fill in the username & pass
 you can change the placeholder values with `-ph (value1) (value2)`
 
 Parameters are formatted with `(key):(value)`
+
+## Rate limiting
+Credential attacks can be **very** loud on a network; hence, are detected easily. A targeted account could simply just receieve a simple lock due to too many
+login attempts. This creates a DoS attack, but prevents you from gaining the users's credentials, which is the goal of Klyda.
+
+So to make these attacks a little less loud, you can take use of the `--rate` tag. This allows you to limit threads to a certain number of requests per minute.<br />
+It will be formatted like this, `--rate (# of requests) (minutes)`
+
+For example, `--rate 5 1` will only send out 5 requests for each minute. Remember however, this is for each thread. If you had 2 threads, this would send 10 requests per minute.
