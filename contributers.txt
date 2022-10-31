@@ -1,4 +1,4 @@
-A list of contributers that has helped develop the Klyda project.
-If you would like to contribute, please create a pull request.
-==================================================================
+If your submitting a contribution to the Klyda project, drop your name here for some creditability :)
+
 Xeonrx
+
