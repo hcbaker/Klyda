@@ -23,3 +23,30 @@ Klyda offers simple, easy to remember usage; however, still offers configurabili
 **4)** Display the Klyda help prompt for usage, `python3 klyda.py -h`
 
 >Klyda has been tested on Windows & Linux, but should work on any machine capable of running Python.
+
+
+What Klyda needs to work are only four simple dependencies: URL to attack, username(s), password(s), and a payload to send the data.
+## The URL
+You can parse the URL via the ``--url`` tag. It should look something like this, `--url http://127.0.0.1`<br />
+Remember to **never** launch an attack on a webpage, that you don't have proper permission to do so.
+## Usernames
+Usernames are the main target to these dictionary attacks. It could be a whole range of usernames, a few in specific, or perhaps just one.
+That's all your decision when using the script. You can specify usernames in a few ways...
+
+**1)** Specify them manually, `-u Admin User123 Guest`<br />
+**2)** Give a file to use, or a few to combine, `-U users.txt extra.txt`<br />
+**3)** Give both a file & manual entry, `-U users.txt -u Johnson924`
+## Passwords
+Passwords are the hard part to these attacks. You don't know them, hence why dictionary & brute force attacks exists. Like the usernames, you can
+give from just one password, up to however many you want. You can specify passwords in a few ways...
+
+**1)** Specify them manually, `-p password 1234 letmein`<br />
+**2)** Give a file to use, or a few to combine, `-P passwords.txt extra.txt`<br />
+**3)** Give both a file & manual entry, `-P passwords.txt -p redklyda24`
+## Payloads
+Payloads are how you form the request, so the target website can take it in, and process it. Usually you would need to specify a: username value, a password value, and sometimes an extra value. You can see the payload your target uses by reviewing the network tab, of your browsers inspect element. For Klyda, you use the `-d` tag.<br />
+
+You need to use placeholders to Klyda knows where to fill in the username & password, when fowarding out its requests. It may look something like this...
+`-d username:xuser password:xpass Login:Login`
+
+`xuser` is the placeholder to inject the usernames, & `xpass` is the placeholder to inject the passwords. Make sure you know these.
