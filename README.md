@@ -62,3 +62,8 @@ So to make these attacks a little less loud, you can take use of the `--rate` ta
 It will be formatted like this, `--rate (# of requests) (minutes)`
 
 For example, `--rate 5 1` will only send out 5 requests for each minute. Remember however, this is for each thread. If you had 2 threads, this would send 10 requests per minute.
+
+## Examples
+Test Klyda out on the Damn Vulnerable Web App (DVWA)
+
+`python3 klyda.py --url http://127.0.0.1/dvwa/login.php -u user guest admin -p 1234 password admin -d username:xuser password:xpass Login:Login --bstr "Login failed"`
