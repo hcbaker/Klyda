@@ -63,7 +63,11 @@ It will be formatted like this, `--rate (# of requests) (minutes)`
 
 For example, `--rate 5 1` will only send out 5 requests for each minute. Remember however, this is for each thread. If you had 2 threads, this would send 10 requests per minute.
 
-## Examples
+## Example
 Test Klyda out on the Damn Vulnerable Web App (DVWA)
 
 `python3 klyda.py --url http://127.0.0.1/dvwa/login.php -u user guest admin -p 1234 password admin -d username:xuser password:xpass Login:Login --bstr "Login failed"`
+## The Future
+Like mentioned earlier, Klyda is still a work in progress. For the future, I plan on adding more functionality and reformating code for a cleaner look.
+
+My top piority is to add proxy functionality, and am currently working on it.
