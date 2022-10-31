@@ -49,4 +49,5 @@ Payloads are how you form the request, so the target website can take it in, and
 You need to use placeholders to Klyda knows where to fill in the username & password, when fowarding out its requests. It may look something like this...
 `-d username:xuser password:xpass Login:Login`
 
-`xuser` is the placeholder to inject the usernames, & `xpass` is the placeholder to inject the passwords. Make sure you know these.
+`xuser` is the placeholder to inject the usernames, & `xpass` is the placeholder to inject the passwords. Make sure you know these. If it is really neccessary, 
+you can change the placeholder values with `-ph (value1) (value2)`
