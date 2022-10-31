@@ -11,7 +11,7 @@ The script works by injecting given credentials into requests, and narrowing dow
 Klyda offers simple, easy to remember usage; however, still offers configurability for your needs:
 - Mulithreaded tasks
 - Combine wordlists for larger scale attacks
-- Blacklisting data to narrow down hits
+- Blacklisting data to narrow down results
 - Limit thread speed for sneaky purposes
 - Alter requests, such as useragent, timeout, & headers
 - File output
