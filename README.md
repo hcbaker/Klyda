@@ -19,7 +19,7 @@ Klyda offers simple, easy to remember usage; however, still offers configurabili
 # Installation & Usage
 **1)** Clone the Git repo to your machine, `git clone https://github.com/Xeonrx/Klyda`<br />
 **2)** Cd into the Klyda directory, `cd Klyda`<br />
-**3)** Install the neccessary modules via Pip, `pip install requests, beautifulsoup4, colorama, numpy`<br />
+**3)** Install the neccessary modules via Pip, `pip install requests beautifulsoup4 colorama numpy`<br />
 **4)** Display the Klyda help prompt for usage, `python3 klyda.py -h`
 
 >Klyda has been mainly designed for Linux, but should work on any machine capable of running Python.
