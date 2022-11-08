@@ -23,7 +23,7 @@ def options(): # avaible options/usage for Klyda
 def helpme(name=None): # klyda help prompt
     return """
  █▄        ▄█
- ████████████ Klyda  : version 1.1
+ ████████████ Klyda  : version 1.0.1
  ██  ████  ██ Author : https://github.com/Xeonrx
  ████████████ Source : https://github.com/Xeonrx/Klyda
  ████████████
