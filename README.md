@@ -24,7 +24,7 @@ Klyda offers simple, easy to remember usage; however, still offers configurabili
 
 >Klyda has been mainly designed for Linux, but should work on any machine capable of running Python.
 
-What Klyda needs to work are only four simple dependencies: URL to attack, username(s), password(s), and a payload to send the data.
+What Klyda needs to work are only four simple dependencies: URL to attack, username(s), password(s), and formdata.
 ## The URL
 You can parse the URL via the ``--url`` tag. It should look something like this, `--url http://127.0.0.1`<br />
 Remember to **never** launch an attack on a webpage, that you don't have proper permission to do so.
