@@ -61,8 +61,9 @@ In order to Klyda to know if it hit a successful strike or not, you need to give
 
 You can specify as much data for each blacklist as needed. If any of the given data is not found from the response, Klyda gives it a "strike", saying
 it was a successful login attempt. Otherwise if data in the blacklists is found, Klyda marks it as an unsuccessful login attempt.
-
 Since you give the data for Klyda to evaluate, false positives are non-apparent.
+
+>If you don't give any data to blacklist, then every request will be marked as a strike from Klyda!
 
 ## Rate limiting
 Credential attacks can be **very** loud on a network; hence, are detected easily. A targeted account could simply just receieve a simple lock due to too many
