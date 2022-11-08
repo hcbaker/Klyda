@@ -13,9 +13,8 @@ Klyda offers simple, easy to remember usage; however, still offers configurabili
 - Limit thread speed for sneaky purposes
 
 <p align="center">
- <img src="https://github.com/Xeonrx/Klydaa/blob/main/img/example.gif">
+ <img src="https://github.com/Xeonrx/Klydaa/blob/main/img/example.png" height=450 wideth=450>
 </p>
-
 
 # Installation & Usage
 **1)** Clone the Git repo to your machine, `git clone https://github.com/Xeonrx/Klydaa/edit/main/README.md`<br />
