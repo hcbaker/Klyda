@@ -5,11 +5,7 @@
 The Klyda project has been created to aid in quick credential based attacks against online web applications.<br />
 Klyda supports the use from simple password sprays, to large multithreaded dictionary attacks.
 
-Klyda is a new project, and I am looking for any contributions; including wordlists contributions. Any help is very appreciated.
-The script works by injecting given credentials into requests, and narrowing down successful results via blacklists of strings, status codes, or content lenghts.
-Since you specify the data for Klyda to blacklist, false positives are non-apparent.
-
-
+Klyda is a new project, and I am looking for any contributions; including wordlists contributions. Any help is very appreciated.<br />
 Klyda offers simple, easy to remember usage; however, still offers configurability for your needs:
 - Mulithreaded tasks
 - Combine wordlists for larger scale attacks
@@ -48,16 +44,27 @@ give from just one password, up to however many you want. You can specify passwo
 **1)** Specify them manually, `-p password 1234 letmein`<br />
 **2)** Give a file to use, or a few to combine, `-P passwords.txt extra.txt`<br />
 **3)** Give both a file & manual entry, `-P passwords.txt -p redklyda24`
-## Payloads
-Payloads are how you form the request, so the target website can take it in, and process it. Usually you would need to specify a: username value, a password value, and sometimes an extra value. You can see the form data your target uses by reviewing the network tab, of your browsers inspect element. For Klyda, you use the `-d` tag.<br />
+## FormData
+FormData is how you form the request, so the target website can take it in, and process the given information. Usually you would need to specify a: username value, a password value, and sometimes an extra value. You can see the FormData your target uses by reviewing the network tab, of your browsers inspect element. For Klyda, you use the `-d` tag.<br />
 
-You need to use placeholders to Klyda knows where to fill in the username & password, when fowarding out its requests. It may look something like this...
+You need to use placeholders to Klyda knows where to inject in the username & password, when fowarding out its requests. It may look something like this...
 `-d username:xuser password:xpass Login:Login`
 
-`xuser` is the placeholder to inject the usernames, & `xpass` is the placeholder to inject the passwords. Make sure you know these. If it is really neccessary, 
-you can change the placeholder values with `-ph (value1) (value2)`
+`xuser` is the placeholder to inject the usernames, & `xpass` is the placeholder to inject the passwords. Make sure you know these, or Klyda won't be able to work.
 
-Parameters are formatted with `(key):(value)`
+Format the FormData as `(key):(value)`
+
+## Blacklists
+In order to Klyda to know if it hit a successful strike or not, you need to give it data to dig through. Klyda takes use of given blacklists from failed login attempts, so it can tell the difference between a failed or complete request. You can blacklist three different types of data...
+
+**1)** Strings, `--bstr "Login failed"`<br />
+**2)** Status Codes, `--bcde 404`<br />
+**3)** Content Length, `--blen 11`
+
+You can specify as much data for each blacklist as needed. If any of the given data is not found from the response, Klyda gives it a "strike", saying
+it was a successful login attempt. Otherwise if data in the blacklists is found, Klyda marks it as an unsuccessful login attempt.
+
+Since you give the data for Klyda to evaluate, false positives are non-apparent.
 
 ## Rate limiting
 Credential attacks can be **very** loud on a network; hence, are detected easily. A targeted account could simply just receieve a simple lock due to too many
@@ -69,9 +76,12 @@ It will be formatted like this, `--rate (# of requests) (minutes)`
 For example, `--rate 5 1` will only send out 5 requests for each minute. Remember however, this is for each thread. If you had 2 threads, this would send 10 requests per minute.
 
 ## Example
-Test Klyda out on the Damn Vulnerable Web App (DVWA)
+Test Klyda out on the Damn Vulnerable Web App (DVWA), or Mutillidae.
 
 `python3 klyda.py --url http://127.0.0.1/dvwa/login.php -u user guest admin -p 1234 password admin -d username:xuser password:xpass Login:Login --bstr "Login failed"`
+
+`python3 klyda.py --url http://10.0.0.112/mutillidae/index.php?page=login.php -u root -P passwords.txt -d username:xuser password:xpass login-php-submit-button:Login --bstr "Authentication Error"`
+
 ## The Future
 Like mentioned earlier, Klyda is still a work in progress. For the future, I plan on adding more functionality and reformating code for a cleaner look.
 
