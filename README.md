@@ -65,14 +65,16 @@ Since you give the data for Klyda to evaluate, false positives are non-apparent.
 
 >If you don't give any data to blacklist, then every request will be marked as a strike from Klyda!
 
-## Rate limiting
-Credential attacks can be **very** loud on a network; hence, are detected easily. A targeted account could simply just receieve a simple lock due to too many
+## Rate limiting & Threads
+By default, Klyda only uses a single thread to run; but, you can specify more, using the `-t` tag. This can be helpful for speeding up your work.
+
+However, credential attacks can be **very** loud on a network; hence, are detected easily. A targeted account could simply just receieve a simple lock due to too many
 login attempts. This creates a DoS attack, but prevents you from gaining the users's credentials, which is the goal of Klyda.
 
-So to make these attacks a little less loud, you can take use of the `--rate` tag. This allows you to limit threads to a certain number of requests per minute.<br />
+So to make these attacks a little less loud, you can take use of the `--rate` tag. This allows you to limit your threads to a certain number of requests per minute.<br />
 It will be formatted like this, `--rate (# of requests) (minutes)`
 
-For example, `--rate 5 1` will only send out 5 requests for each minute. Remember however, this is for each thread. If you had 2 threads, this would send 10 requests per minute.
+For example, `--rate 5 1` will only send out 5 requests for each minute. Remember, this is for each thread. If you had 2 threads, this would send 10 requests per minute.
 
 ## Example
 Test Klyda out on the Damn Vulnerable Web App (DVWA), or Mutillidae.
