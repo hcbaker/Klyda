@@ -46,9 +46,9 @@ give from just one password, up to however many you want. You can specify passwo
 FormData is how you form the request, so the target website can take it in, and process the given information. Usually you would need to specify a: username value, a password value, and sometimes an extra value. You can see the FormData your target uses by reviewing the network tab, of your browsers inspect element. For Klyda, you use the `-d` tag.<br />
 
 You need to use placeholders to Klyda knows where to inject in the username & password, when fowarding out its requests. It may look something like this...
-`-d username:!user password:!pass Login:Login`
+`-d username:xuser password:xpass Login:Login`
 
-`!user` is the placeholder to inject the usernames, & `!pass` is the placeholder to inject the passwords. Make sure you know these, or Klyda won't be able to work.
+`xuser` is the placeholder to inject the usernames, & `xpass` is the placeholder to inject the passwords. Make sure you know these, or Klyda won't be able to work.
 
 Format the FormData as `(key):(value)`
 
@@ -76,9 +76,9 @@ For example, `--rate 5 1` will only send out 5 requests for each minute. Remembe
 ## Example
 Test Klyda out on the Damn Vulnerable Web App (DVWA), or Mutillidae.
 
-`python3 klyda.py --url http://127.0.0.1/dvwa/login.php -u user guest admin -p 1234 password admin -d username:!user password:!pass Login:Login --bstr "Login failed"`
+`python3 klyda.py --url http://127.0.0.1/dvwa/login.php -u user guest admin -p 1234 password admin -d username:xuser password:xpass Login:Login --bstr "Login failed"`
 
-`python3 klyda.py --url http://127.0.0.1/mutillidae/index.php?page=login.php -u root -P passwords.txt -d username:!user password:!pass login-php-submit-button:Login --bstr "Authentication Error"`
+`python3 klyda.py --url http://127.0.0.1/mutillidae/index.php?page=login.php -u root -P passwords.txt -d username:xuser password:xpass login-php-submit-button:Login --bstr "Authentication Error"`
 
 ## The Future
 Like mentioned earlier, Klyda is still a work in progress. For the future, I plan on adding more functionality and reformating code for a cleaner look.
