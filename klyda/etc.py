@@ -26,6 +26,7 @@ banner = """
 |         || ' <| | || / _` / _` |) (_))  ))
 |_________||_|\_\_|\_, \__,_\__,_|  [v1.0.1]
                     |__/ \n"""
+# ASCII art from http://www.patorjk.com/
 
 strikecombos = []
 requests = 0
