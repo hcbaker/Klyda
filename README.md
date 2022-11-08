@@ -7,18 +7,19 @@ Klyda supports the use from simple password sprays, to large multithreaded dicti
 
 Klyda is a new project, and I am looking for any contributions; including wordlists contributions. Any help is very appreciated.
 The script works by injecting given credentials into requests, and narrowing down successful results via blacklists of strings, status codes, or content lenghts.
+Since you specify the data for Klyda to blacklist, false positives are non-apparent.
+
 
 Klyda offers simple, easy to remember usage; however, still offers configurability for your needs:
 - Mulithreaded tasks
 - Combine wordlists for larger scale attacks
 - Blacklisting data to narrow down results
 - Limit thread speed for sneaky purposes
-- Alter requests, such as useragent, timeout, & headers
-- File output
 
 <p align="center">
  <img src="https://github.com/Xeonrx/Klydaa/blob/main/img/example.gif">
 </p>
+
 
 # Installation & Usage
 **1)** Clone the Git repo to your machine, `git clone https://github.com/Xeonrx/Klydaa/edit/main/README.md`<br />
