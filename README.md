@@ -1,6 +1,6 @@
 <p align="center">
  <img src="https://github.com/Xeonrx/Resprayd/blob/main/img/fronticon.png">
- </p>
+</p>
 
 The Klyda project has been created to aid in quick credential based attacks against online web applications.<br />
 Klyda supports the use from simple password sprays, to large multithreaded dictionary attacks.
@@ -15,6 +15,10 @@ Klyda offers simple, easy to remember usage; however, still offers configurabili
 - Limit thread speed for sneaky purposes
 - Alter requests, such as useragent, timeout, & headers
 - File output
+
+<p align="center">
+ <img src="https://github.com/Xeonrx/Klydaa/blob/main/img/example.gif">
+</p>
 
 # Installation & Usage
 **1)** Clone the Git repo to your machine, `git clone https://github.com/Xeonrx/Klydaa/edit/main/README.md`<br />
