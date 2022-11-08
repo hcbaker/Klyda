@@ -19,11 +19,10 @@ Klyda offers simple, easy to remember usage; however, still offers configurabili
 # Installation & Usage
 **1)** Clone the Git repo to your machine, `git clone https://github.com/Xeonrx/Klydaa/edit/main/README.md`<br />
 **2)** Cd into the Klyda directory, `cd Klyda`<br />
-**3)** Install the neccessary modules via Pip, `pip install requests, beautifulsoup4`<br />
+**3)** Install the neccessary modules via Pip, `pip install requests, beautifulsoup4, colorama, numpy`<br />
 **4)** Display the Klyda help prompt for usage, `python3 klyda.py -h`
 
->Klyda has been tested on Windows & Linux, but should work on any machine capable of running Python.
-
+>Klyda has been mainly designed for Linux, but should work on any machine capable of running Python.
 
 What Klyda needs to work are only four simple dependencies: URL to attack, username(s), password(s), and a payload to send the data.
 ## The URL
